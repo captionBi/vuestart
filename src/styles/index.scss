@@ -1,0 +1,128 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+// main-container global css
+//覆盖样式
+.app-container {
+  padding: 20px;
+  height: 100%;
+
+  //头部文字
+  .server {
+    .server_title {
+      padding-top: 30px;
+      font-size: 20px;
+      color: #999;
+      font-weight: 400;
+      line-height: 1;
+      padding-bottom: 20px;
+    }
+  }
+
+  //弹窗样式
+  .el-dialog {
+    .el-dialog__body {
+      padding: 20px 20px;
+    }
+
+    .el-dialog__title {
+      color: #666;
+      font-size: 20px;
+    }
+
+    .el-dialog__header {
+      padding-bottom: 0px;
+    }
+
+    //input样式
+    .el-input {
+      width: 300px;
+    }
+
+    .el-form-item {
+      margin-bottom: 10px;
+    }
+
+    .el-form-item__label {
+      color: #666;
+    }
+
+    .dialog-text {
+      p {
+        padding-left: 8px;
+        margin-left: 10px;
+        position: relative;
+      }
+
+      p:before {
+        content: "*";
+        color: #f56d48;
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+}
+
+// 时间范围‘至’的宽度
+.el-range-separator {
+  width: 10% !important;
+}
